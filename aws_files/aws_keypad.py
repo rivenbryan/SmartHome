@@ -1,6 +1,6 @@
 from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTClient
 from boto3.dynamodb.conditions import Key, Attr
-from rpi_lcd import LCD
+from rpi_lcd import LCDhttps://github.com/rivenbryan/SmartHome/blob/master/aws_files/aws_keypad.py
 from time import sleep
 from picamera import PiCamera
 import RPi.GPIO as GPIO
@@ -22,7 +22,7 @@ def telegrambot(): # Telegram Bot to receive image from RaspberryPi
 
     camera = PiCamera()
     print("Telegram Bot")
-    my_bot_token = '729641371:AAFgRD3BpngMq4Pngp_VZOU_Hc7A7uDFQAM'
+    my_bot_token = ''
     bot = telepot.Bot(my_bot_token)
     camera.capture('/home/pi/Desktop/Assignment2/image1.jpg')
     bot.sendPhoto(chat_id=414346130, photo=open('/home/pi/Desktop/Assignment2/image1.jpg', 'rb'))
